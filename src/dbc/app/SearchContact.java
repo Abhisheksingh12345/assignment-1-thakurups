@@ -18,7 +18,10 @@ public class SearchContact {
             }
             i++;
         }
-        System.out.println(count + "match found!");
+        if (count == 0)
+            System.out.println("No match found!");
+        else
+            System.out.println(count + "match found!");
         for (Integer index : ar) {
             ViewContact object = new ViewContact();
             object.viewDetails(ob.get(index));
