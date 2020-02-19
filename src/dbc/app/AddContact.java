@@ -1,5 +1,4 @@
-import dbc.app.Person;
-import dbc.app.ValidateInput;
+package dbc.app;
 
 public class AddContact {
     Person ob = new Person();
