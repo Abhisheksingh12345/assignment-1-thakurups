@@ -60,7 +60,7 @@ public class AddContact {
 
         System.out.println("Email Address: ");
         String mai = sc.nextLine();
-        boolean a1 = false;
+        boolean a1 = addEmail(mai);
         while (!a1) {
             System.out.println("invalid email please re-enter");
             a1 = addEmail(sc.nextLine());
