@@ -33,6 +33,13 @@ public class Execution {
                     obj1.searchContact(ob);
                     a = 3;
                     break;
+                case 4:
+                    DeleteContact obj2 = new DeleteContact();
+                    int ind = obj2.printContacts(ob);
+                    System.out.println(ob.get(ind).getFirstName() + " " + ob.get(ind).getLastName() + "'s contact removed!");
+                    ob.remove(ob.get(ind));
+                    a = 4;
+                    break;
                 default:
                     a = 5;
 
