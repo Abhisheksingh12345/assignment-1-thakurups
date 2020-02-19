@@ -18,6 +18,6 @@ public class Execution {
                 AddContact ob1 = new AddContact();
                 ob.add(ob1.addContact());
         }
-        ob.get(0).getContactNumbers();
+        System.out.println(ob.get(0).getContactNumbers());
     }
 }

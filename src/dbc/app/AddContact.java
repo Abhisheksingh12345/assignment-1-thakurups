@@ -35,7 +35,6 @@ public class AddContact {
         System.out.println("You have chosen to add a new contact:\nPlease enter the name of the Person");
         System.out.print("First Name: ");
         addFirstName(sc.nextLine());
-        System.out.println();
         System.out.print("Last Name: ");
         addLastName(sc.nextLine());
         boolean a = true;
@@ -57,14 +56,16 @@ public class AddContact {
         }//end of while
         System.out.println("Would you like to add email address? (y/n): y");
         char c = (sc.nextLine()).charAt(0);
-
-        System.out.println("Email Address: ");
-        String mai = sc.nextLine();
-        boolean a1 = addEmail(mai);
-        while (!a1) {
-            System.out.println("invalid email please re-enter");
-            a1 = addEmail(sc.nextLine());
-            continue;
+        if (c == 'y') {
+            System.out.print("Email Address: ");
+            String mai = sc.nextLine();
+            boolean a1 = addEmail(mai);
+            while (!a1) {
+                System.out.println("invalid email please re-enter");
+                System.out.print("Email Address: ");
+                a1 = addEmail(sc.nextLine());
+                continue;
+            }
         }
         return ob;
 
