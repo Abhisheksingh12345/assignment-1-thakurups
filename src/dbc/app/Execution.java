@@ -23,32 +23,9 @@ public class Execution {
                     ob.add(ob1.addContact());
                     break;
                 case 2:
-                    System.out.println("---Here are all your contacts---");
-                    for (Person oj : ob) {
-                        System.out.println("-------- * -------- * -------- * --------");
-                        System.out.println("First Name: " + oj.getFirstName());
-                        System.out.println("Last Name: " + oj.getLastName());
-                        System.out.println("Contact Number(s): " + oj.getContactNumbers());
-                        System.out.println("Email address: " + oj.getEmailAddress());
-                        System.out.println("-------- * -------- * -------- * --------");
-                    }
+                    ViewContact obj = new ViewContact();
+                    obj.viewContact(ob);
                 case 3:
-                    System.out.println("You could search for a contact from their first names:");
-                    String searchName = sc.nextLine();
-                    int count = 0;
-                    ArrayList<Integer> ar = new ArrayList<>();
-                    int i = 0;
-                    for (Person oj : ob) {
-                        if (oj.getFirstName().equals(searchName)) {
-                            ar.add(i);
-                            count++;
-                        }
-                        i++;
-                    }
-                    System.out.println(count + "match found!");
-                    for (Integer index : ar) {
-
-                    }
 
             }
 
