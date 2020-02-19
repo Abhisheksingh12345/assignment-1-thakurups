@@ -5,6 +5,17 @@ import java.util.ArrayList;
 public class Person {
     private String firstName;
     private String lastName;
+
+    private String emailAddress;
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+
     private ArrayList<String> contactNumbers;
 
     public String getFirstName() {
@@ -27,7 +38,7 @@ public class Person {
         return contactNumbers;
     }
 
-    public void setContactNumbers(ArrayList<String> contactNumbers) {
-        this.contactNumbers = contactNumbers;
+    public void setContactNumbers(String number) {
+        contactNumbers.add(number);
     }
 }
