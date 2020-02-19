@@ -40,9 +40,12 @@ public class Execution {
                     ob.remove(ob.get(ind));
                     a = 4;
                     break;
-                default:
+                case 5:
                     a = 5;
-
+                    break;
+                default:
+                    System.out.println("invalid choice please re-enter");
+                    break;
 
             }
 
