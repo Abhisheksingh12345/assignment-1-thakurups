@@ -1,5 +1,7 @@
 package dbc.app;
 
+import java.util.Scanner;
+
 public class AddContact {
     Person ob = new Person();
     ValidateInput ob1 = new ValidateInput();
@@ -26,5 +28,46 @@ public class AddContact {
             return true;
         }
         return false;
+    }
+
+    public Person addContact() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("You have chosen to add a new contact:\nPlease enter the name of the Person");
+        System.out.print("First Name: ");
+        addFirstName(sc.nextLine());
+        System.out.println();
+        System.out.print("Last Name: ");
+        addLastName(sc.nextLine());
+        boolean a = true;
+        while (a) {
+            System.out.print("Contact Number: ");
+            String no = sc.nextLine();
+            a = addNumber(no);
+            if (!a) {
+                System.out.println("invalid no please re-enter");
+                a = true;
+                continue;
+            }
+            System.out.println("Would you like to add another contact number? (y/n): ");
+            char c = (sc.nextLine()).charAt(0);
+            if (c == 'y')
+                a = true;
+            else
+                a = false;
+        }//end of while
+        System.out.println("Would you like to add email address? (y/n): y");
+        char c = (sc.nextLine()).charAt(0);
+
+        System.out.println("Email Address: ");
+        String mai = sc.nextLine();
+        boolean a1 = false;
+        while (!a1) {
+            System.out.println("invalid email please re-enter");
+            a1 = addEmail(sc.nextLine());
+            continue;
+        }
+        return ob;
+
+
     }
 }

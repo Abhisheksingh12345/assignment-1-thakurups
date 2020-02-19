@@ -8,6 +8,8 @@ public class Person {
 
     private String emailAddress;
 
+    private ArrayList<String> contactNumbers = new ArrayList<>();
+
     public String getEmailAddress() {
         return emailAddress;
     }
@@ -16,7 +18,6 @@ public class Person {
         this.emailAddress = emailAddress;
     }
 
-    private ArrayList<String> contactNumbers;
 
     public String getFirstName() {
         return firstName;
