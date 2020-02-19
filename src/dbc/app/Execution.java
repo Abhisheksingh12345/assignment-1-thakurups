@@ -21,11 +21,21 @@ public class Execution {
                 case 1:
                     AddContact ob1 = new AddContact();
                     ob.add(ob1.addContact());
+                    a = 1;
                     break;
                 case 2:
                     ViewContact obj = new ViewContact();
                     obj.viewContact(ob);
+                    a = 2;
+                    break;
                 case 3:
+                    SearchContact obj1 = new SearchContact();
+                    obj1.searchContact(ob);
+                    a = 3;
+                    break;
+                default:
+                    a = 5;
+
 
             }
 
